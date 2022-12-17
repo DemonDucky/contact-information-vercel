@@ -5,7 +5,7 @@ export default function MainImg({size, className}: {size?: "sm" | "base" | "lg",
 
     switch (size) {
         case "sm":
-            tailwindSize = "w-40"
+            tailwindSize = "w-20"
             break
         case "base":
             tailwindSize = "w-80"
