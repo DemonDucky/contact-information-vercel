@@ -1,5 +1,4 @@
 import NavBar from "~/components/NavBar";
-import MainLayout from "~/layouts/MainLayout";
 import MainImg from "~/components/MainImg";
 import Button from "~/components/Button";
 import {IoLogoOctocat} from "react-icons/io5";
@@ -9,7 +8,7 @@ import ContactIcon from "~/components/ContactIcon";
 
 export default function Contact() {
     return (
-        <MainLayout className={"flex flex-col justify-center"}>
+        <>
             <div className={"justify-center flex flex-col grow"}>
                 <MainImg size={"sm"}></MainImg>
                 <Button className={"mx-auto my-4"} disabled={true}>Contact</Button>
@@ -23,6 +22,6 @@ export default function Contact() {
                 </div>
             </div>
             <NavBar/>
-        </MainLayout>
+        </>
     )
 }

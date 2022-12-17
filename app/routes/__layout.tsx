@@ -1,6 +1,7 @@
 import {useLayoutEffect, useState} from "react";
+import {Outlet} from "@remix-run/react";
 
-export default function MainLayout({children, className}: { children: React.ReactNode, className?: string }) {
+export default function __layout() {
 
     const [windowHeight, setWindowHeight] = useState<string>()
     const [windowWidth, setWindowWidth] = useState<string>()
@@ -25,6 +26,8 @@ export default function MainLayout({children, className}: { children: React.Reac
         }
     }, [])
 
+    console.log("test")
+
     return (
         <div style={
             {
@@ -34,8 +37,8 @@ export default function MainLayout({children, className}: { children: React.Reac
                 paddingTop: paddingTop
             }
         }
-             className={`bg-gradient-to-tr from-neutral-700 font-base via-gray-700 to-neutral-800 text-white px-4 pb-6 ${className}`}>
-            {children}
+             className={"bg-gradient-to-tr from-neutral-700 font-base via-gray-700 to-neutral-800 text-white px-4 pb-6 flex flex-col justify-center"}>
+            <Outlet/>
         </div>
     )
 }
