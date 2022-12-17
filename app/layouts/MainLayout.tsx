@@ -7,16 +7,16 @@ export default function MainLayout({children, className}: { children: React.Reac
     const [paddingTop, setPaddingTop] = useState<string>()
 
     useLayoutEffect(() => {
-        setWindowWidth(`${window.innerWidth}px`)
-        setWindowHeight(`${window.innerHeight}px`)
 
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
         isIOS ? setPaddingTop('3rem') : setPaddingTop('1rem')
 
         function resizeWindow() {
-            setWindowWidth(`${window.innerWidth}px`)
+            setWindowWidth(window.innerWidth < 1024 ? `${window.innerWidth}px` : `1024px`)
             setWindowHeight(`${window.innerHeight}px`)
         }
+
+        resizeWindow()
 
         window.addEventListener("resize", resizeWindow)
 
@@ -29,6 +29,7 @@ export default function MainLayout({children, className}: { children: React.Reac
         <div style={
             {
                 width: windowWidth,
+                margin: "0 auto",
                 height: windowHeight,
                 paddingTop: paddingTop
             }

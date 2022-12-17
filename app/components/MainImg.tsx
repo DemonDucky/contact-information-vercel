@@ -18,7 +18,7 @@ export default function MainImg({size, className}: {size?: "sm" | "base" | "lg",
     }
     return (
         <img className={`${tailwindSize} object-cover min-h-0 min-w-0 rounded-full mb-2 block mx-auto ${className}`}
-             src="/images/cat.jpg"
+             src="/images/cat.webp"
              alt="avatar"/>
     )
 }
