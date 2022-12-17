@@ -14,7 +14,7 @@ export default function MainImg({size, className}: {size?: "sm" | "base" | "lg",
             tailwindSize = "w-96"
             break
         default:
-            tailwindSize = "w-56"
+            tailwindSize = "w-48"
     }
     return (
         <img className={`${tailwindSize} object-cover min-h-0 min-w-0 rounded-full mb-2 block mx-auto ${className}`}

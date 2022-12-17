@@ -1,13 +1,17 @@
-import {useEffect, useState} from "react";
+import {useLayoutEffect, useState} from "react";
 
 export default function MainLayout({children, className}: { children: React.ReactNode, className?: string }) {
 
     const [windowHeight, setWindowHeight] = useState<string>()
     const [windowWidth, setWindowWidth] = useState<string>()
+    const [paddingTop, setPaddingTop] = useState<string>()
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         setWindowWidth(`${window.innerWidth}px`)
         setWindowHeight(`${window.innerHeight}px`)
+
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+        isIOS ? setPaddingTop('3rem') : setPaddingTop('1rem')
 
         function resizeWindow() {
             setWindowWidth(`${window.innerWidth}px`)
@@ -25,10 +29,11 @@ export default function MainLayout({children, className}: { children: React.Reac
         <div style={
             {
                 width: windowWidth,
-                height: windowHeight
+                height: windowHeight,
+                paddingTop: paddingTop
             }
         }
-             className={`bg-gradient-to-tr from-neutral-700 font-base via-gray-700 to-neutral-800 text-white px-4 pb-6 pt-12 ${className}`}>
+             className={`bg-gradient-to-tr from-neutral-700 font-base via-gray-700 to-neutral-800 text-white px-4 pb-6 ${className}`}>
             {children}
         </div>
     )
