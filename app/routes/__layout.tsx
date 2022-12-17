@@ -13,7 +13,7 @@ export default function __layout() {
         isIOS ? setPaddingTop('3rem') : setPaddingTop('1rem')
 
         function resizeWindow() {
-            setWindowWidth(window.innerWidth < 1024 ? `${window.innerWidth}px` : `1024px`)
+            setWindowWidth(`${window.innerWidth}px`)
             setWindowHeight(`${window.innerHeight}px`)
         }
 
@@ -25,8 +25,6 @@ export default function __layout() {
             window.removeEventListener("resize", resizeWindow)
         }
     }, [])
-
-    console.log("test")
 
     return (
         <div style={

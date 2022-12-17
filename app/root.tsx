@@ -18,6 +18,7 @@ export function links() {
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Luong Tuan Anh",
+  description: "Mobile portfolio of Luong Tuan Anh",
   viewport: "width=device-width,initial-scale=1",
 });
 
