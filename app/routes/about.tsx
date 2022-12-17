@@ -11,10 +11,7 @@ export default function About() {
                 <Button className={"mx-auto my-8"} disabled={true}>About me</Button>
                 <p className={"text-center text-lg"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
                     architecto consectetur consequatur
-                    dolorum hic iusto labore nobis, nostrum, odio porro provident saepe? Autem ea laborum perferendis
-                    perspiciatis quasi quod voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Adipisci aspernatur autem commodi, consequuntur, dolores doloribus eos est exercitationem facere
-                    ipsum modi nam nobis, numquam officia quaerat tempora vel voluptatem voluptatum.</p>
+                    dolorum hic iusto labore nobis, nostrum, od.</p>
             </div>
             <NavBar/>
         </MainLayout>
