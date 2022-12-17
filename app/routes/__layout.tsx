@@ -33,8 +33,8 @@ export default function __layout() {
             {
                 width: windowWidth,
                 margin: "0 auto",
-                height: windowHeight,
-                paddingTop: paddingTop
+                height: windowHeight || "100vh",
+                paddingTop: paddingTop || "1rem"
             }
         }
              className={"bg-gradient-to-tr from-neutral-700 font-base via-gray-700 to-neutral-800 text-white px-4 pb-6 flex flex-col justify-center"}>

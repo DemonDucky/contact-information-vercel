@@ -22,10 +22,3 @@ export default function Index() {
             </>
     )
 }
-
-export function headers() {
-    return {
-        'innerWidth': 300,
-        'innerHeight': 300
-    }
-}
