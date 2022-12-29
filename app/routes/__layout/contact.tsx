@@ -7,6 +7,11 @@ import {MdOutlineFacebook} from "react-icons/md";
 import ContactIcon from "~/components/ContactIcon";
 
 export default function Contact() {
+
+    function openFacebookInApp() {
+        window.location = "fb://profile/vit.conn" as unknown as Location
+    }
+
     return (
         <>
             <div className={"justify-center flex flex-col grow"}>
@@ -20,6 +25,7 @@ export default function Contact() {
                     <ContactIcon link={"google.com/mail"} icon={<AiOutlineMail/>}>hoangtuan@duck.com</ContactIcon>
                     <ContactIcon link={"github.com/demonducky"} icon={<AiOutlineGithub/>}>demonducky</ContactIcon>
                 </div>
+                <button onClick={openFacebookInApp}>Open facebook</button>
             </div>
             <NavBar/>
         </>
