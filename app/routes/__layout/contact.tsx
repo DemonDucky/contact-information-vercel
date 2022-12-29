@@ -9,7 +9,10 @@ import ContactIcon from "~/components/ContactIcon";
 export default function Contact() {
 
     function openFacebookInApp() {
-        window.location = "fb://profile/vit.conn" as unknown as Location
+        window.location = "fb://page/100088528106704" as unknown as Location
+    }
+    function open() {
+        window.location = "fb://profile/100030640875411" as unknown as Location
     }
 
     return (
@@ -26,6 +29,7 @@ export default function Contact() {
                     <ContactIcon link={"github.com/demonducky"} icon={<AiOutlineGithub/>}>demonducky</ContactIcon>
                 </div>
                 <button onClick={openFacebookInApp}>Open facebook</button>
+                <button onClick={open}>Open profile</button>
             </div>
             <NavBar/>
         </>
