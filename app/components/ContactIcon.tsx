@@ -1,6 +1,6 @@
 export default function ContactIcon({icon, children, link}: { icon: React.ReactNode, children: string, link: string }) {
     return (
-        <a target={"_blank"} rel={"noreferrer"} href={`https://${link}`} className={"flex flex-col items-center mx-auto rounded-lg"}>
+        <a target={"_blank"} rel={"noopener"} href={`https://${link}`} className={"flex flex-col items-center mx-auto rounded-lg"}>
             <i className={"text-3xl"}>{icon}</i>
             <p className={"text-sm"}>{children}</p>
         </a>
